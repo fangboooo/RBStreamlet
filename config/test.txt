@@ -1,0 +1,48 @@
+要停止当前正在运行的所有容器并删除它们:
+    docker stop $(docker ps -aq)
+    docker rm $(docker ps -aq)
+    docker ps
+    docker images
+    ./stra
+
+执行以下命令以进入一个正在运行的容器：
+    docker exec -it 容器名或容器ID /bin/bash
+    cd 8.16c
+
+要删除 Docker 镜像，可以使用 docker rmi 命令
+    docker rmi [OPTIONS] 镜像名或镜像ID
+    docker rmi myimage:tag          # 删除指定标签的镜像
+
+构建镜像：
+    docker build -t name:version .
+
+要停止当前正在运行的所有容器并删除它们，可以使用以下命令：
+    docker stop $(docker ps -aq)
+    docker rm $(docker ps -aq)
+
+删除单个镜像：
+    docker rmi 镜像名或镜像ID
+删除多个镜像：
+    docker rmi 镜像名1 镜像名2 ...
+
+对于run中修改共识，
+    -algorithm=newConsensus
+    -algorithm=streamlet
+
+构建镜像：
+    docker build -t name:version .
+    docker build -t bamboo:server1 .
+    docker build -t bamboo:client1 .
+
+要查看文件的后几行:
+    tail -n 20 文件名
+
+要在 Linux 终端中查看文件的前几行内容
+    head -n 20 文件名
+
+保存镜像
+docker save -o 1400.tar 4a67.tar ...
+docker save -o 1400a_image.tar bamboo:server
+
+查看文件详细信息
+ls -lh <file_path>
